@@ -1,0 +1,11 @@
+{
+  "name": "esxparse",
+  "version": "0.2.1",
+  "description": "Parse ESX vim-cmd output",
+  "main": "lib.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

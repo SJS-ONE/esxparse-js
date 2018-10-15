@@ -1,0 +1,21 @@
+(vim.Datastore.Summary) {
+   datastore = 'vim.Datastore:192.168.2.2:/nfs/vmdata',
+   name = "nfs",
+   url = "/vmfs/volumes/5411e347-0c184477",
+   capacity = 222089392947,
+   freeSpace = 162849502003,
+   uncommitted = 37585398681,
+   accessible = true,
+   multipleHostAccess = <unset>,
+   type = "NFS",
+   maintenanceMode = <unset>,
+   test = (vim.Datastore.bla) [
+       "asdf",
+        "",
+       "asdf",
+       (vim.Datastore.bla.blu) {
+           test = "value"
+       },
+       (vim.Datastore.bla.nil) null
+   ]
+}
