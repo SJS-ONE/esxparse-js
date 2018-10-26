@@ -101,14 +101,30 @@ function Parser(lexer){
     this.start = (beautify = false) => {
         this.loadNewToken()
         this.loadNewToken()
-        let data = this.dataset()
-        if(beautify){
-            data = this.Beautify(data)
+        
+        let multiSets = []
+        while( !Token.IsType(this.curToken, Token.Types.EOF) ){
+            let data = this.dataset()
+            multiSets.push(data)
+            this.loadNewToken()
         }
-        return data
+        if(beautify){
+            multiSets = this.BeautifymultiSets(multiSets)
+        }
+        return multiSets
     }
 
-    this.Beautify = (dt) => {
+    this.Beautify = (data) => {
+        const to = {}
+        const datas = data.map(this.BeautifySingleDataset)
+        for(let ds of datas){
+            const top = Object.keys(ds)[0]
+            to[top] = ds[top]
+        }
+        return to
+    }
+
+    this.BeautifySingleDataset = (dt) => {
 
         const nw = {}
         if(dt["_name"] === undefined){
@@ -129,7 +145,7 @@ function Parser(lexer){
             nw[name] = {}
         }
         for(let key in data){
-            nw[name][key] = this.Beautify(data[key])
+            nw[name][key] = this.BeautifySingleDataset(data[key])
         }
         return nw
     }

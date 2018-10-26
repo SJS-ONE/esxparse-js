@@ -1,11 +1,25 @@
 {
   "name": "esxparse",
-  "version": "0.2.2",
+  "version": "0.2.1",
   "description": "Parse ESX vim-cmd output",
-  "main": "esxparse.js",
+  "main": "lib.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "SJS-ONE",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SJS-ONE/esxparse-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SJS-ONE/esxparse-js/issues"
+  },
+  "homepage": "https://github.com/SJS-ONE/esxparse-js#readme",
+  "keywords": [
+    "esxi",
+    "parser",
+    "vmware",
+    "vm"
+  ]
 }
