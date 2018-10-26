@@ -109,7 +109,7 @@ function Parser(lexer){
             this.loadNewToken()
         }
         if(beautify){
-            multiSets = this.BeautifymultiSets(multiSets)
+            multiSets = this.Beautify(multiSets)
         }
         return multiSets
     }

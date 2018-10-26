@@ -1,6 +1,6 @@
 {
   "name": "esxparse",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Parse ESX vim-cmd output",
   "main": "esxparse.js",
   "scripts": {
